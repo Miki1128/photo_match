@@ -1,24 +1,40 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## (users) テーブル
+## travelersテーブル
 
-Things you may want to cover:
+| Column                | Type     | Options     |
+| ----------------------| -------- | ------------|
+| name                  | string   | null: false |
+| name_kana             | string   | null: false |
+| email                 | string   | null: false |
+| encrypted_password    | string   | null: false |
 
-* Ruby version
+## photographers テーブル
 
-* System dependencies
+| Column                | Type     | Options     |
+| ----------------------| -------- | ------------|
+| name                  | string   | null: false |
+| name_kana             | string   | null: false |
+| email                 | string   | null: false |
+| country               | string   | null: false |
+| language              | string   | null: false |
+| taste                 | string   | null: false |
+| encrypted_password    | string   | null: false |
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+## contacts テーブル
 
-* How to run the test suite
+| Column                 | Type       | Options      |
+| -----------------------| ---------- | ------------ |
+| country                | string     | null: false  |
+| fullname               | string     | null: false  |
+| mail                   | string     | null: false  |
+| tel                    | string     | null: false  |
+| budget                 | string     | null: false  |
+| shooting_start_at_date | string     | null: false  |
+| shooting_time_duration | string     | null: false  |
+| comment                | text       | null: false  |
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- belongs_to :user
